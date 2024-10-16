@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/foodlens_green_500"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bbb"
+        tools:layout_editor_absoluteX="-18dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <ImageButton
+            android:id="@+id/btn_run_ui_camera"
+            android:layout_width="235dp"
+            android:layout_height="177dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="440dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/foodsnap"
+            android:contentDescription="설명"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="337dp"
+            android:layout_height="168dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="식단정보 상세보기"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRunUiEdit"
+            android:layout_marginTop="352dp"
+            />
+        <!-- 다른 UI 요소들은 여기에 추가합니다 -->
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+             />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_open_website"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:text="게시판 이동"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/shareButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:text="공유
+        하기"
+        app:layout_constraintLeft_toRightOf="@+id/button_open_website"
+        app:layout_constraintRight_toLeftOf="@+id/saveButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:text="식단
+        저장
+        하기"
+        app:layout_constraintLeft_toRightOf="@+id/shareButton"
+        app:layout_constraintRight_toLeftOf="@+id/viewDietButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <Button
+        android:id="@+id/viewDietButton"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:text="식단
+        보기"
+        app:layout_constraintLeft_toRightOf="@+id/saveButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
